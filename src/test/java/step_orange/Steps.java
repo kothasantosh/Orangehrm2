@@ -75,7 +75,7 @@ public class Steps {
 	public void user_should_be_able_to_see_username_alert_message() throws Throwable {
 		String title=driver.findElement(By.xpath("//*[@id='spanMessage']")).getText();
 		if(title.contentEquals("Username cannot be empty")) System.out.println("******Title Matched");
-		else System.out.println("*****Title NOT Matched");
+		else System.out.println("Title NOT Matched");
 		driver.manage().timeouts().implicitlyWait(70, TimeUnit.SECONDS);
 		System.out.println("User should be able to see username alert message");
 		driver.close();
@@ -103,7 +103,7 @@ public class Steps {
 	public void user_should_be_able_to_see_password_alert_message() throws Throwable {
 		String title=driver.findElement(By.xpath("//*[@id='spanMessage']")).getText();
 		if(title.contentEquals("Password cannot be empty")) System.out.println("******Title Matched");
-		else System.out.println("*****Title NOT Matched");
+		else System.out.println("Title NOT Matched");
 		driver.manage().timeouts().implicitlyWait(70, TimeUnit.SECONDS);
 		System.out.println("User should be able to see password alert message");
 	    driver.close();
@@ -245,13 +245,13 @@ public class Steps {
 
 	@Then("^User should be able to add details of new employee$")
 	public void user_should_be_able_to_add_details_of_new_employee() throws Throwable {
-		opm.enterfirstname("rajesh");
-		opm.entermiddlename("kumar");
-		opm.enterlastname("behara");
+		opm.enterfirstname("santosh");
+		opm.entermiddlename("k");
+		opm.enterlastname("kotha");
 		opm.clickCheckBox();
-		opm.enterUserName("rajesh");
-		opm.enterPassWord("rajesh04");
-		opm.enterConfirmPassword("rajesh04");
+		opm.enterUserName("santosh");
+		opm.enterPassWord("9398794944");
+		opm.enterConfirmPassword("9398794944");
 		opm.clickSave();
 		Thread.sleep(1000);
 		driver.close();
@@ -307,8 +307,8 @@ public class Steps {
 
 	@When("^User enters username and password of the employee$")
 	public void user_enters_username_and_password_of_the_employee() throws Throwable {
-		olg.enterUsername("rajesh");
-		olg.enterPassword("rajesh04");
+		olg.enterUsername("santosh");
+		olg.enterPassword("9398794944");
 	   
 	}
 
